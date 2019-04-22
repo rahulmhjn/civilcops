@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+</head>
+<style>
+*{
+margin:0;
+padding : 0
+}
+header
+{
+background-image:url(https://image.ibb.co/f0T3rp/Whats_App_Image_2018_09_27_at_10_43_35_PM.jpg);
+height: 100vh;
+background-size:cover;
+background-position:center;
+}
+.main-nav
+{
+float:right;
+list-style:none;
+margin-top:30px;
+}
+.main-nav li{
+display: inline-block;
+}
+.main-nav li a{
+color:white;
+text-decoration:none;
+padding: 5px 20px;
+font-family: "Roboto",sans-serif;
+font-size: 15px;
+}
+.main-nav li.active a
+{
+  background-color: darkorange;
+border: 1px solid white;
+}
+.main-nav li a:hover
+{
+  background-color: darkorange;
+ border: 1px solid white;}
+.logo img
+{ width: 100px;
+  height: auto;
+float:left; }
+body{
+font-family:monospace;
+}
+.row{
+max-width:1200px;
+margin:auto;
+}
+.ResearchPapers
+{
+ position: absolute;
+ width :1200px;
+ margin-left:0px;
+ margin-top:0px;
+}
+.ResearchPapers,h1{
+color:white;
+text-transform:uppercase;
+font-size:70px;
+text-align:center;
+margin-top:275px;
+}
+.button{
+margin-top:30px;
+margin-left:10px;
+margin-right:10px;
+}
+.btn{
+border: 1px solid white;
+padding:10px 30px;
+color:white;
+text-decoration:none;
+margin-right: 5px;
+font-size: 13px;
+text-transform:uppercase;
+}
+.btn-one{
+background-color: darkorange;
+font-family: "Roboto",sans-serif;
+}
+.btn-two{
+background-color: darkorange;
+font-family: "Roboto",sans-serif;
+}
+.btn-three{
+background-color: darkorange;
+font-family: "Roboto",sans-serif;
+}
+
+</style>
+<body>
+<header>
+<div class ="row">
+
+
+<ul class="main-nav">
+<li><a href="/users/logout">Logout</a></li>
+</ul>
+</div>
+<div class="ResearchPapers">
+<h1>Interested?</h1>
+<div class="button" >
+<form method = "post", action = "/imageUpload" enctype="multipart/form-data">
+  <input type="file"class="btn btn-one" name="imageFile" />
+  <input type="submit" class="btn btn-one"  name="submit" value="Upload Image">
+</form>
+  <a href="" class="btn btn-two"> View </a>
+<a href="" class="btn btn-three"> Downloads</a>
+</div>
+</div>
+</header>
+</body>
+</html>
