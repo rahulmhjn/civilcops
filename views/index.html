@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <style>
@@ -9,23 +10,19 @@
 margin:0;
 padding : 0
 }
-header
-{
-background-image:url(https://image.ibb.co/f0T3rp/Whats_App_Image_2018_09_27_at_10_43_35_PM.jpg);
-height: 100vh;
-background-size:cover;
-background-position:center;
-}
-.main-nav
+@media all and (max-width: 768px) {
+  header{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main-nav
 {
 float:right;
-list-style:none;
 margin-top:30px;
 }
-.main-nav li{
-display: inline-block;
-}
 .main-nav li a{
+  border: 3px solid white;
+  border-radius: 10px;
 color:white;
 text-decoration:none;
 padding: 5px 20px;
@@ -39,8 +36,75 @@ border: 1px solid white;
 }
 .main-nav li a:hover
 {
+  border: 3px solid darkorange;
+  color:darkorange;
+}
+.xx2{
+  margin-top: 10px;
+  height: 120px;
+  width: 160px;
+}
+.data{
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.712);
+  text-align: center;
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: 550;
+  margin-left: 30%;
+}
+}
+body
+{
+background-image:url(https://image.ibb.co/f0T3rp/Whats_App_Image_2018_09_27_at_10_43_35_PM.jpg);
+height: 100vh;
+width: 100%;
+background-size:cover;
+background-position:center;
+background-repeat: no-repeat;
+}
+@media all and (min-width: 769px) {
+
+.main-nav
+{
+float:right;
+margin-right: -20%;
+margin-top:30px;
+}
+.main-nav li a{
+  border: 3px solid white;
+  border-radius: 10px;
+color:white;
+text-decoration:none;
+padding: 5px 20px;
+font-family: "Roboto",sans-serif;
+font-size: 15px;
+}
+.main-nav li.active a
+{
   background-color: darkorange;
- border: 1px solid white;}
+border: 1px solid white;
+}
+.main-nav li a:hover
+{
+  border: 3px solid darkorange;
+  color:darkorange;
+}
+.xx2{
+  margin-top: 10px;
+  margin-left: -10%;
+  height: 120px;
+  width: 160px;
+}
+.data{
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.712);
+  text-align: center;
+  margin-top: 10%;
+  font-size: 20px;
+  font-weight: 550;
+}
+}
 .logo img
 { width: 100px;
   height: auto;
@@ -72,25 +136,40 @@ margin-left:10px;
 margin-right:10px;
 }
 .btn{
-border: 1px solid white;
-padding:10px 30px;
+border: 2px solid white;
+border-radius: 5px;
+padding:10px 15px;
+font-size: 20px;
+font-weight: 550;
 color:white;
+cursor: pointer;
 text-decoration:none;
-margin-right: 5px;
-font-size: 13px;
 text-transform:uppercase;
 }
-.btn-one{
-background-color: darkorange;
-font-family: "Roboto",sans-serif;
+.btn1{
+border: 3px solid darkorange;
+border-radius: 5px;
+padding:3px 7px;
+font-size: 20px;
+font-weight: bolder;
+cursor: pointer;
+color:darkorange;
+background-color: rgba(255, 255, 255, 0);
+text-decoration:none;
+text-transform:uppercase;
 }
-.btn-two{
-background-color: darkorange;
-font-family: "Roboto",sans-serif;
-}
-.btn-three{
-background-color: darkorange;
-font-family: "Roboto",sans-serif;
+.btn1:hover{
+  margin-right: -24px;
+border: 3px solid rgb(255, 115, 0);;
+border-radius: 5px;
+padding:3px 7px;
+font-size: 26px;
+font-weight: bolder;
+cursor: pointer;
+color:rgb(255, 115, 0);
+background-color: rgba(255, 255, 255, 0);
+text-decoration:none;
+text-transform:uppercase;
 }
 
 </style>
@@ -98,20 +177,21 @@ font-family: "Roboto",sans-serif;
 <header>
 <div class ="row">
 
-
+<img src="https://www.smvdu.ac.in/images/headers/logo-600.png" class="xx2">
 <ul class="main-nav">
-<li><a href="/users/logout">Logout</a></li>
+<li><a href="/users/logout" style="font-size: 30px; font-weight: 600;"><i class="fa fa-sign-out" style="font-size:24px"></i>Logout</a></li>
 </ul>
 </div>
-<div class="ResearchPapers">
-<h1>Interested?</h1>
-<div class="button" >
+<div class="row">
+  <div class="data"><br><br><br><br>
+    <p style="font-size: 40px;font-weight: 550;color: white;">Image Uploader </p><br>
+    <hr style="border-top: 3px solid darkorange; width: 50%;margin-left: 25%;"><br><br><br>
 <form method = "post", action = "/imageUpload" enctype="multipart/form-data">
-  <input type="file"class="btn btn-one" name="imageFile" />
-  <input type="submit" class="btn btn-one"  name="submit" value="Upload Image">
+  <input type="file"class="btn" name="imageFile" />
+  <input type="submit" class="btn1"  name="submit" value="Upload">
 </form>
-  <a href="" class="btn btn-two"> View </a>
-<a href="" class="btn btn-three"> Downloads</a>
+  </div>
+  </div>
 </div>
 </div>
 </header>
